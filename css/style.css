@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+html {
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  height: 100%;
+
+}
+
+body {
+
+  font-family: "Montserrat", sans-serif;
+
+  margin: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: url("https://r4.wallpaperflare.com/wallpaper/653/402/499/romain-trystam-digital-art-cityscape-city-lights-wallpaper-d31a439ad8e55c5dc8922ec3f1f84281.jpg") no-repeat center center fixed;
+  
+  background-position: 40% 60%;
+  
+  background-size: cover;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  padding: 32px;
+
+}
+
+h1 {
+
+  margin: 0;
+
+  font-weight: bold;
+
+  font-size: 24px;
+
+  line-height: 32px;
+
+  color: #26384E;
+
+  transform: translateY(20px);
+
+  transition: all 0.4s ease;
+
+  transition-delay: 0.2s;
+
+  overflow: hidden;
+
+  max-width: 100%;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+@media screen and (max-width: 520px) {
+
+  h1 {
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+  }
+
+}
+
+p {
+
+  font-size: 16px;
+
+  line-height: 24px;
+
+  color: #889DB8;
+
+  transform: translateY(20px);
+
+  transition: all 0.4s ease;
+
+  transition-delay: 0.3s;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+@media screen and (max-width: 520px) {
+
+  p {
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link {
+
+  padding-right: 5px;
+
+  padding-left: 5px;
+
+  border-radius: 3px;
+
+  background-color: rgba(3, 3, 3, 0);
+
+  box-shadow: rgba(255, 255, 255, 0.09) 0px 0px 0px 1px inset;
+
+}
+
+.swiper-wrapper {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  z-index: 1;
+
+  position: relative;
+
+}
+
+.swiper-container {
+
+  #background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  width: 100%;
+
+  position: relative;
+
+  max-width: 420px;
+
+  height: 100%;
+
+  max-height: 420px;
+
+  border-radius: 10px;
+  
+  backdrop-filter: blur(3px);
+
+  -webkit-backdrop-filter: blur(3px);
+
+}
+
+
+.slider-item {
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(255,255,255,0.03);
+  
+  border-radius: 10px;
+  
+  border: 1px solid rgba(255,255,255,0.05);
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex-shrink: 0;
+
+  opacity: 0;
+
+  #background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+
+  cursor: -webkit-grab;
+
+  cursor: grab;
+
+}
+
+.slider-item-content {
+
+  padding: 32px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  transition: 0.4s;
+
+}
+
+.slider-item-content > * {
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+}
+
+.swiper-slide-active .slider-item-content > * {
+
+  transform: translateY(0px);
+
+  opacity: 1;
+
+}
+
+
+.swiper-pagination {
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 8px;
+
+  transform: translatex(-50%);
+
+  z-index: 1;
+
+  width: auto !important;
+
+}
+
+.swiper-pagination-bullet {
+
+  border-radius: 0;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  line-height: 30px;
+
+  font-size: 12px;
+
+  opacity: 1;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  display: inline-block;
+
+  margin-right: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+
+}
+
+.swiper-pagination-bullet-active {
+
+  background: rgba(255, 255, 255, .2);
+
+  width: 20px;
+
+  border-radius: 10px;
+
+}
+
+.slider-buttons {
+
+  position: absolute;
+
+  display: flex;
+
+  top: 100%;
+
+  justify-content: flex-end;
+
+  width: 100%;
+
+  padding-top: 8px;
+
+}
+
+
+
+.socials {
+
+  position: fixed;
+
+  top: 12px;
+
+  right: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+.socials .social-link {
+
+  display: inline-block;
+
+  margin-left: 8px;
+
+  color: #fff;
+
+}
+
+@media screen and (max-width: 520px) {
+
+  .swiper-button-next:hover:before,
+
+.swiper-button-prev:hover:before {
+
+    display: none;
+
+  }
+
+}
